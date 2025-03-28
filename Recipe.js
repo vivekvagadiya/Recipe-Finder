@@ -64,12 +64,10 @@ function renderRecipeCard(recipe) {
         `
     })
     document.querySelector('.parent').innerHTML = html;
-    // document.querySelectorAll('.recipe-card').classList.add('recipe-card-add');
 }
 
 renderRecipeCard(recipe);
 renderInput();
-//<label for="search-item">Search Item</label>
 
 function renderInput() {
     let html = '';
@@ -101,15 +99,10 @@ function handlesearch(){
 }
 
 function showClickCard(id){
-    // let getRecipeId=dataset.recipeItem;
     let getRecipeId=id;
-    // console.log(typeof getRecipeId)
     
     let matchingItem;
     recipe.forEach((item)=>{
-        // console.log(typeof item.id.toString())
-        // console.log(typeof getRecipeId)
-        // console.log(item.id.toString()===getRecipeId)
         if(item.id===getRecipeId){
             matchingItem=item;
         }
@@ -135,8 +128,5 @@ function removeCard(){
     document.querySelector('.click-card').classList.remove('click-card-style')
 
 }
-// document.querySelectorAll('.recipe-card').forEach((item)=>{
-//     item.addEventListener('click',()=>{
-//     })
-// })
+
 

@@ -4,7 +4,7 @@ let recipe = [
         title: 'Vadapav',
         ingredients: ['besan', 'pav', 'Oil'],
         instructions: 'coock and fry in oil',
-        detailedInstruction: 'detail in pavbhaji',
+        detailedInstruction: 'Add water, milk, yeast, 1/3 cup (71 g) butter, flour, salt and sugar to a bowl of a stand mixer.Punch the dough down and knead the dough on a lightly floured surface for 2 minutes.  ',
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdk0yigvWXGWXm9QgBOscZOiBE1uMa-HNqA&s'
     },
     {
@@ -12,7 +12,7 @@ let recipe = [
         title: 'Pavbhaji',
         ingredients: ['pav', 'Vegitable', 'Oil', 'butter'],
         instructions: 'Eat pav with bhaji',
-        detailedInstruction: 'Slit the pav buns horizontally leaving one edge intact.',
+        detailedInstruction: 'आलू, टमाटर, मटर जैसी सब्जियों को मैश करके मसाले और नींबू का रस डालकर तैयार की गई भाजी को मक्खन वाले पाव के साथ सर्व किया जाता है',
         image: 'https://priyafoods.com/cdn/shop/files/PAVBHAJIMASALA_2.jpg?v=1701947643'
     },
     {
@@ -20,7 +20,7 @@ let recipe = [
         title: 'Pani Puri',
         ingredients: ['Pani', 'Puri', 'Potato', 'onion'],
         instructions: 'Eat puri filled with potato and pani',
-        detailedInstruction: 'Boil the potatoes till they are cooked completely.Peel them and then chop them',
+        detailedInstruction: 'Boil the potatoes till they are cooked completely.Peel them and then chop them,puris (hollow, crispy fried bread), boiled potatoes, chickpeas, and a flavorful water (pani) made with tamarind, mint, cilantro, spices, and water, along with chutneys and other toppings',
         image: 'https://media.istockphoto.com/id/1292640617/photo/sev-puri-is-a-famous-midday-snack-in-india-served-over-a-rustic-wooden-background-selective.jpg?s=612x612&w=0&k=20&c=PP2WC5Z-ri3QmneP8PWu99ic4-j9x3LGlUUKMYos42U='
     },
     {
@@ -28,7 +28,7 @@ let recipe = [
         title: 'Burger',
         ingredients: ['pav', 'tikki', 'Oil,vagetable'],
         instructions: 'insert tikki in burger and then eat',
-        detailedInstruction:'Divide the ground beef. Divide the ground beef into 4 or 6 portions, depending on the number of burgers you would like to make.',
+        detailedInstruction:'Divide the ground beef. Divide the ground beef into 4 or 6 portions, depending on the number of burgers you would like to make.Preheat an outdoor grill for high heat and lightly oil grate.Whisk egg, salt, and pepper together in a medium bowl.',
         image: 'https://static.vecteezy.com/system/resources/thumbnails/023/809/530/small/a-flying-burger-with-all-the-layers-ai-generative-free-photo.jpg'
     },
     {
@@ -38,6 +38,14 @@ let recipe = [
         instructions: 'bake pizza and put some cheeze',
         detailedInstruction:'Start with a crust. Add a sauce.Add some veggies, such as: Try some fruit on your pizza.',
         image: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg'
+    },
+    {
+        id:6,
+        title: 'Fruit salad',
+        ingredients: ['fruit', 'vagetable', 'salad','onion','paneer','cheeze'],
+        instructions: 'Fry fruit with salads with milk and cheeze or paneer',
+        detailedInstruction:'Start with a crust. Add a sauce.Add some veggies, such as: Try some fruit on your pizza.',
+        image: 'https://media.istockphoto.com/id/511622035/photo/heallthy-organic-fruit-salad.jpg?s=612x612&w=0&k=20&c=Nl3vuD8QLVCWCzFqiHBvRQzeoY2p0chmhzuPsW2hNBA= '
     }
 ]
 
@@ -111,18 +119,20 @@ function showClickCard(id){
     console.log(matchingItem)
     
     document.querySelector('.click-card').innerHTML=`
-    <button onclick="removeCard()">close</button>
-    <p><b>${matchingItem.title}</b></p>
-    <p><b>ingredients:</b>${matchingItem.ingredients}</p>
-    <p><b>instructions:</b>${matchingItem.instructions}</p>
-    <p><b>recipe:</b>${matchingItem.detailedInstruction}</p>
+    <button class="close-card-btn" onclick="removeCard()">close</button>
     <img src="${matchingItem.image}" alt="vadapav">
+    <p><b>${matchingItem.title}</b></p>
+    <p><b>ingredients: </b>${matchingItem.ingredients}</p>
+    <p><b>instructions:  </b>${matchingItem.instructions}</p>
+    <p><b>recipe:  </b>${matchingItem.detailedInstruction}</p>
     `
     document.querySelector('.parent').classList.add('hide-back')
+    document.querySelector('.search-area').classList.add('hide-back')
     document.querySelector('.click-card').classList.add('click-card-style')
 }
 function removeCard(){
     document.querySelector('.click-card').innerHTML='';
+    document.querySelector('.search-area').classList.remove('hide-back')
     document.querySelector('.parent').classList.remove('hide-back')
     document.querySelector('.click-card').classList.remove('click-card-style')
 

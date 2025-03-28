@@ -1,14 +1,18 @@
+body{
+    background-color: black;
+    color: white;
+}
 .recipe-content{
     width: 800px;
     height: auto;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 .recipe-card{
     width: 250px;
     height: auto;
     padding: 5px;
-    border: 1px solid black;
+    border: 1px solid white;
     overflow: hidden;
     cursor: pointer;
     margin: 10px;
@@ -36,23 +40,27 @@ body div{
     justify-content: space-between;
 }
 .click-card-style{
-    position: absolute;
-    width: 400px;
-    height: auto;
+    /* position: relative; */
+    width: 600px;
+    height: 500px;
     margin: auto;
-    float: center;
+    margin-top: 100px;
     /* visibility:hidden; */
     /* margin-left: 500px; */
-    height: auto;
-    box-shadow:50px black;
-    border: 1px solid black;
+    box-shadow:50px white;
+    border: 1px solid white;
     cursor: pointer;
     text-transform: capitalize;
     font-family:Arial, Helvetica, sans-serif;
 }
 .click-card img{
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    margin-left: 150px;
+    width: 300px;
+}
+.close-card-btn{
+    position:absolute;
+    margin-left:555px;
 }
 
 .search-area{
@@ -84,5 +92,6 @@ body div{
 }
 
 .hide-back{
-    opacity: 0.1;
+    /* opacity: 0.1; */
+    visibility: hidden;
 }

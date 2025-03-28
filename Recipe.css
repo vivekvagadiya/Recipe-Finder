@@ -60,7 +60,9 @@ body div{
 }
 .close-card-btn{
     position:absolute;
-    margin-left:555px;
+    margin-left:578px;
+    background-color: red;
+    border-radius: 10px;
 }
 
 .search-area{

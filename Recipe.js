@@ -63,10 +63,8 @@ function renderRecipeCard(recipe) {
         </div>
         `
     })
-
     document.querySelector('.parent').innerHTML = html;
     // document.querySelectorAll('.recipe-card').classList.add('recipe-card-add');
-
 }
 
 renderRecipeCard(recipe);
@@ -119,7 +117,7 @@ function showClickCard(id){
     console.log(matchingItem)
     
     document.querySelector('.click-card').innerHTML=`
-    <button class="close-card-btn" onclick="removeCard()">close</button>
+    <button class="close-card-btn" onclick="removeCard()">x</button>
     <img src="${matchingItem.image}" alt="vadapav">
     <p><b>${matchingItem.title}</b></p>
     <p><b>ingredients: </b>${matchingItem.ingredients}</p>
